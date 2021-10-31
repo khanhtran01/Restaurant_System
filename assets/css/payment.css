@@ -1,0 +1,145 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --main--color :rgba(49,50,88,255);
+    --header--border--color: #eaebea;
+}
+
+/* -----------------header-------------------- */
+.header {
+    position: inherit;
+    height: 52px;
+    box-shadow: 4px 4px 4px var(--header--border--color);
+}
+
+.btn--back{
+    position: absolute;
+    margin: 5px 0px;
+    margin-left: 5%;
+}
+.btn--back li {
+    float: left;
+    list-style: none;
+    padding: 10px;
+}
+.icon--back {
+    color: white;
+    background-color: var(--main--color);
+    border-radius: 5px;
+}
+
+.title{
+    position: absolute;
+    margin: 5px 0;
+    left: 0px;
+    right: 0px;
+    padding: 10px 0px;
+    text-align: center;
+}
+.title a{
+    text-decoration: none;
+    color : black;  
+    font-weight: 600;
+}
+
+/* ---------------container---------------------- */
+
+.showProduct--item{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.item--image {
+    width: 100px;
+    height: 100px;
+}
+.item--details{
+    width: 100%;
+    margin-left: 10px;
+}
+.item--details .item--details--name{
+    margin: 10px 0px;
+}
+.item--details .item--details--price{
+    float: right;
+    margin-right: 10px;
+    color: red;
+}
+
+
+.chooseMethod{
+    margin: 20px 10px 10px 10px;
+}
+
+.chooMethod--choose {
+    list-style-type: none;
+    margin: 5px 0px 5px 15px;
+}
+
+.chooseMethod--choose li {
+    padding: 3px 10px;
+    margin: 0px 5px;
+    list-style-type: none;
+    float: left;
+    color: black;
+    border: solid var(--main--color) 1px;
+    border-radius: 5px;
+}
+.active ,.chooseMethod--method:hover{
+    background-color: var(--main--color) !important;
+    color: white !important ;
+}
+
+.hide{
+    display: none !important;
+}
+
+.form__e-banking{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    line-height: 30px;
+}
+.form {
+    width: 60%;
+    margin: 30px auto;
+}
+.form__e-wallet{
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    line-height: 30px;
+}
+
+
+.price {
+    color: red;
+}
+
+input[type=text],select {
+    padding: 10px;
+    border-radius: 5px;
+}
+input[type=submit] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--main--color);
+    color: white;
+    border-radius: 5px;
+}
+/* -----------------------footer------------------ */
+
+.footer{
+    text-align: center;
+    height: 60px;
+    background-color: var(--main--color);
+}
