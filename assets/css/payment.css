@@ -1,80 +1,274 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
 }
+
 :root {
     --main--color :rgba(49,50,88,255);
-    --header--border--color: #eaebea;
 }
 
-/* -----------------header-------------------- */
-.header {
-    position: inherit;
-    height: 52px;
-    box-shadow: 4px 4px 4px var(--header--border--color);
+.row
+{
+    --bs-gutter-x: 0rem;
 }
 
-.btn--back{
-    position: absolute;
-    margin: 5px 0px;
-    margin-left: 5%;
+/* .header
+{
+    margin-bottom: 10px;
+} */
+
+.full-content
+{
+    padding: 10px 0;
+    background-color: #e1f5ff;
 }
-.btn--back li {
-    float: left;
-    list-style: none;
-    padding: 10px;
-}
-.icon--back {
+
+.header-block
+{
     color: white;
     background-color: var(--main--color);
-    border-radius: 5px;
+    height: 50px;
 }
 
-.title{
-    position: absolute;
-    margin: 5px 0;
-    left: 0px;
-    right: 0px;
-    padding: 10px 0px;
+.back-btn
+{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-btn:hover
+{
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.header-term
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.info-header
+{
+    height: 30px;
+    background-color: cornflowerblue;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 2.5%;
+    color: white;
+}
+
+.info-body
+{
+    height: 100px;
+    background-color: #abe1fa;
+}
+
+.info-name_mobile
+{
+    padding-left: 2.5%;
+    margin: auto;
+}
+
+.info-name
+{
+    font-size: 20px;
+}
+
+.info-address
+{
+    padding-top: 26px;
+}
+
+.info-change
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.change_info-btn
+{
+    width: 70%;
+    min-height: 30px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+    color: cornflowerblue;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.change_info-btn:hover
+{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.product-list
+{
+    /* height: 200px; */
+    background-color: white;
+    margin: 10px 0;
+    padding: 10px 10px;
+}
+
+.list-header
+{
+    padding-bottom: 20px;
+}
+
+.show-product
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.product 
+{
+    border-color: black;
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 1px;
+    height: 80px;
+    align-items: center;
+}
+
+.product-count
+{
     text-align: center;
 }
-.title a{
-    text-decoration: none;
-    color : black;  
-    font-weight: 600;
+
+.product-total
+{
+    text-align: right;
+    padding-right: 10px;
 }
 
-/* ---------------container---------------------- */
+.box
+{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+}
 
-.showProduct--item{
-    background-color: antiquewhite;
+.total
+{
+    height: 50px;
+    background-color: #3fb9eb;
+    justify-content: end;
+}
+
+.total-blank1
+{
+    background-color: white;
+}
+
+.total-text
+{
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.total-num
+{
+    line-height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.payment-method
+{
+    padding: 8px 0;
     display: flex;
-    flex-direction: row;
-    margin: 10px;
-    box-shadow: 2px 2px 2px black;
+    background-color: turquoise;
 }
 
-.item--image {
-    width: 100px;
-    height: 100px;
-}
-.item--details{
-    width: 100%;
-    margin-left: 10px;
-}
-.item--details .item--details--name{
-    margin: 10px 0px;
-}
-.item--details .item--details--price{
-    float: right;
-    margin-right: 10px;
-    color: red;
+.payment-text
+{
+    font-size: 18px;
+    padding-left: 12px;
+    margin-right: 24px;
+    line-height: 40px;
 }
 
+.method
+{
+    margin: 0 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* min-width: 100px; */
+    background-color: white;
+    line-height: 36px;
+    height: 40px;
+    border-style: solid;
+    border-width: 2px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.method:hover
+{
+    cursor: pointer;
+}
+
+.method:checked
+{
+    background-color: gray;
+}
+
+.pay
+{
+    border-style: double;
+    border-width: 0px;
+    border-top-width: 5px;
+    height: 80px;
+    background-color: yellow;
+
+}
+
+.attention
+{
+    font-size: 12px;
+    margin-top: 54px;
+    padding-left: 12px;
+}
+
+.pay-action
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pay-btn
+{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(18, 60, 136);
+    color: white;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.pay-btn:hover
+{
+    opacity: 80%;
+    cursor: pointer;
+}
 
 .chooseMethod{
-    margin: 20px 10px 10px 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: white;
 }
 
 .chooMethod--choose {
