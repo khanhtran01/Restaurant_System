@@ -97,4 +97,24 @@ document.getElementById("button_payment").addEventListener("click", function () 
     })
     
 });
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+const tabs = $$(".__tab-item");
+const panes = $$(".item_list");
+
+const tabActive = $(".__tab-item.active");
+
+
+tabs.forEach((tab, index) => {
+  const pane = panes[index];
+
+  tab.onclick = function () {
+    $(".__tab-item.active").classList.remove("active");
+    $(".item_list.active").classList.remove("active");
+
+    this.classList.add("active");
+    pane.classList.add("active");
+  };
+});
 
