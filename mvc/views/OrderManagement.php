@@ -112,8 +112,9 @@
                                         </div>
                                     </div>
 
-                                <button onclick="FinishFunc('item1')" class="button_payment"> Finish</button>
+                                
                             </div>
+                            <br><button onclick="FinishFunc('item1')" class="button_payment"> Finish</button><br>
                         </div>
                     </div>
 
@@ -135,8 +136,8 @@
                                         </div>
                                     </div>
 
-                                <button onclick="FinishFunc('item2')"  class="button_payment"> Finish</button>
                             </div>
+                            <br><button onclick="FinishFunc('item1')" class="button_payment"> Finish</button><br>
                         </div>
                     </div>
 
@@ -222,8 +223,8 @@
                                     </div>
 
 
-                                <button onclick="FinishFunc('item3')"  class="button_payment"> Finish</button>
                             </div>
+                            <br><button onclick="FinishFunc('item1')" class="button_payment"> Finish</button><br>
                         </div>
                     </div>
                     
@@ -255,8 +256,8 @@
                                         </div>
                                     </div>
 
-                                <button onclick="FinishFunc('item4')"  class="button_payment"> Finish</button>
                             </div>
+                            <br><button onclick="FinishFunc('item1')" class="button_payment"> Finish</button><br>
                         </div>
                     </div>
 
@@ -264,6 +265,7 @@
                 </div>
             </div>
         </div>
+        <br><br>
         <div class="footer">
 
         </div>

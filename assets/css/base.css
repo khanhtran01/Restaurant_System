@@ -189,7 +189,7 @@
     font-size: 20px;
     font-weight: 600;
     color: rgb(235, 100, 21);
-    margin-left: 800px;
+    margin-left: 900px;
 }
 
 .container_cart{
@@ -260,7 +260,16 @@
     overflow: scroll;
 }
 .button_payment{
-    margin-left: 10px;
+    margin-left: 1000px;
+    /* margin-right: 10px; */
+    margin-bottom: -15px;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(235, 100, 21);
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    /* margin-left: 10px;
     margin-right: 10px;
     margin-bottom: -15px;
     width: 100%;
@@ -268,5 +277,5 @@
     background-color: rgb(235, 100, 21);
     font-size: 20px;
     font-family: 'Dancing Script', cursive;
-    font-weight: 600;
+    font-weight: 600; */
 }
