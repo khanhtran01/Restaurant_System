@@ -73,6 +73,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     })
 });
+var __tabs = document.querySelectorAll(".__tab-item");
+var panes = document.querySelectorAll(".item_list");
+panes[0].classList.add("active");
+
+var tabActive = document.querySelector(".__tab-item.active");
+
+__tabs.forEach((tab, index) => {
+  var pane = panes[index];
+
+  tab.onclick = function () {
+    document.querySelector(".__tab-item.active").classList.remove("active");
+    document.querySelector(".item_list.active").classList.remove("active");
+
+    this.classList.add("active");
+    pane.classList.add("active");
+  };
+});
 document.getElementById("button_close_modal").addEventListener("click", function () {
     document.getElementsByClassName('modal_product')[0].classList.add('displayNode');
 });
@@ -82,6 +99,16 @@ showModal.forEach(ele => {
     ele.addEventListener("click", function () {
         var id = ele.parentNode.getAttribute('id');
         document.getElementsByClassName('modal_product')[0].classList.remove('displayNode');
+        $.ajax({
+            url: "./Home/viewModal",
+            method: "POST",
+            data: {
+                id: id,
+            },
+            success: function(data) {
+                $('.__modal-content').html(data);
+            }
+        })
     });
 })
 document.getElementById("button_payment").addEventListener("click", function () {
@@ -97,26 +124,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
     })
     
 });
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
-
-const tabs = $$(".__tab-item");
-const panes = $$(".item_list");
-console.log(panes);
-panes[0].classList.add("active");
-
-const tabActive = $(".__tab-item.active");
 
 
-tabs.forEach((tab, index) => {
-  const pane = panes[index];
 
-  tab.onclick = function () {
-    $(".__tab-item.active").classList.remove("active");
-    $(".item_list.active").classList.remove("active");
-
-    this.classList.add("active");
-    pane.classList.add("active");
-  };
-});
 

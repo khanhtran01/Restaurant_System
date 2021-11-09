@@ -43,24 +43,10 @@
 <div class="modal_product displayNode">
     <div class="modal_content">
         <div class="modal_content_in">
-            <div class="content_top">
-                <div class="content_top_img">
-                    <img src="https://i.ytimg.com/vi/cJu6tFJe_Gc/maxresdefault.jpg" alt="">
-                </div>
-                <div class="content_top_sale">
-                    <h2 class="content_top_name">Cơm sườn 2</h2>
-                    <div class="content_top_price">Price: 20000</div>
-                    <div class="content_top_quantity">Số lượng: 20</div>
-                </div>
+            <div class="__modal-content">
+                
             </div>
-            <div class="content_bottom">
-                <div class="content_bottom_description">
-                    <h2 class="content_bottom_description_title">Description</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda labore aliquid nihil
-                        accusamus non. Rerum sunt necessitatibus deserunt impedit? Commodi voluptates laboriosam
-                        tempora incidunt consectetur, totam cumque quisquam minus molestiae!</p>
-                </div>
-            </div>
+            
             <div class="button_close_modal">
                 <button id="button_close_modal">Close</button>
             </div>

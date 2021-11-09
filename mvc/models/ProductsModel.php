@@ -23,5 +23,14 @@ class ProductsModel extends db{
         }
         return $data;
     }
+    public function getProductByID($id){
+        $sql = "SELECT * FROM food WHERE ID = $id";
+        $query = $this->_query($sql);
+        $data = [];
+        while ($row = mysqli_fetch_assoc($query)) {
+            array_push($data, $row);
+        }
+        return $data[0];
+    }
 }
 ?>
