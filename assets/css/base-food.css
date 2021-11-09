@@ -103,6 +103,9 @@
     width: 30px;
     height: 30px;
 }
+.list_menu .css-them-img{
+    margin-left: 15px;
+}
 .nav_bar_up_cart{
     font-size: 30px;
     margin-left: auto;

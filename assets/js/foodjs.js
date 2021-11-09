@@ -102,6 +102,8 @@ const $$ = document.querySelectorAll.bind(document);
 
 const tabs = $$(".__tab-item");
 const panes = $$(".item_list");
+console.log(panes);
+panes[0].classList.add("active");
 
 const tabActive = $(".__tab-item.active");
 
