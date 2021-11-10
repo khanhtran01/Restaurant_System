@@ -3,13 +3,14 @@
     padding: 0px;
 } */
 
-:root {
+.__payment-view {
     --main--color :rgba(49,50,88,255);
+    font-size: 15px;
 }
 
 .row
 {
-    --bs-gutter-x: 0rem;
+    --bs-gutter-x: 0rem !important;
 }
 
 /* .header
@@ -149,11 +150,10 @@
     padding-right: 10px;
 }
 
-.box
+.__box-img
 {
-    width: 30px;
-    height: 30px;
-    background-color: black;
+    width: 85px;
+    height: 65px;
 }
 
 .total

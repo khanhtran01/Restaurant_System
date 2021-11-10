@@ -248,8 +248,13 @@
     margin-left: 5px;
     font-size: 15px;
 }
+.cart_info_button_plus,.cart_info_button-{
+    border: 1px solid #000;
+    height: 19px;
+}
 .cart_info_button_plus{
     margin-left: 5px;
+    
 }
 .container_cart_info_price{
     font-size: 15px;
