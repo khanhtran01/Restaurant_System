@@ -28,22 +28,28 @@ document.getElementById("button_payment").addEventListener("click", function () 
             <div class="product-list">
                 <div class="list-header row">
                     <div class="product-name col-6">Tên món ăn</div>
-                    <div class="product-price col-2"></div>
+                    <div class="product-price col-2">Đơn giá</div>
                     <div class="product-count col-2">Số lượng</div>
                     <div class="product-total col-2">Thành tiền</div>
                 </div>
                 <div class="show-product">`
+    
+    
+    var ArrIDProduct = [];
+    var ArrProductQuality = [];
     arrData.forEach(ele => {
-        totalPrice += +ele.price
+        totalPrice += +ele.price;
+        ArrIDProduct.push(ele.id);
+        ArrProductQuality.push(ele.quality);
         paymentView += `
         <div class="product row">
             <div class="product-img col-1">
                 <img class="__box-img" src="${ele.img}">
             </div>
             <div class="product-name col-5">${ele.name}</div>
-            <div class="product-price col-2"></div>
+            <div class="product-price col-2">50000đ</div>
             <div class="product-count col-2">${ele.quantity}</div>
-            <div class="product-total col-2">${ele.price}đ</div>
+            <div class="product-total col-2">${ele.price}</div>
         </div>`
     })
     paymentView +=`
@@ -52,7 +58,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                     <div class="total-blank1 col-7"></div>
                     <div class="total-blank2 col-1"></div>
                     <div class="total-text col-2">TỔNG TIỀN</div>
-                    <div class="total-num col-2">${totalPrice}đ</div>
+                    <div class="total-num col-2">${totalPrice}</div>
                 </div>
             </div>
     
@@ -68,7 +74,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                 </div>
             
                 <div class="form" id="form">
-                    <form id="e-banking" class="form__e-banking hide" action="">
+                    <form id="e-banking" class="form__e-banking hide" action="../controllers/payment.php" method="post">
                         <label for="bank">Chọn ngân hàng:</label>
                         <select id="bank" name="bank">
                             <option value="ACB">Ngân hàng Á Châu (ACB)</option>
@@ -77,12 +83,15 @@ document.getElementById("button_payment").addEventListener("click", function () 
                         </select>
                         <label for="seri">Số seri:</label>
                         <input type="text" name="seri" id="seri">
-                        <p class="price">Tổng tiền : ${totalPrice}đ</p>
+                        <p class="price">Tổng tiền : ${totalPrice}</p>
+                        <input type="hidden" name="arr_id" id="arr_id" value="${ArrIDProduct}">
+                        <input type="hidden" name="user_ID" id="userID" value="2">
+                        <input type="hidden" name="arr_quality" id="arr_quality" value="${ArrProductQuality}">
                         <input type="submit" value="Thanh toán">
         
                     </form>
         
-                    <form id="e-wallet" class="form__e-wallet" action="">
+                    <form id="e-wallet" class="form__e-wallet" action="../controllers/payment.php" method="post">
                         <label for="bank">Chọn Ví điện tử:</label>
                         <select id="e-wallet" name="e-wallet">
                             <option value="zalo">Zalo Pay</option>
@@ -90,7 +99,10 @@ document.getElementById("button_payment").addEventListener("click", function () 
                         </select>
                         <label for="seri">Số điện thoại:</label>
                         <input type="text" name="phone" id="phone" placeholder="Phone number">
-                        <p class="price">Tổng tiền : ${totalPrice}đ</p>
+                        <p class="price">Tổng tiền : ${totalPrice}</p>
+                        <input type="hidden" name="arr_id" id="arr_id" value="${ArrIDProduct}">
+                        <input type="hidden" name="user_ID" id="userID" value="2">
+                        <input type="hidden" name="arr_quality" id="arr_quality" value="${ArrProductQuality}">
         
                         <input type="submit" value="Thanh toán">
                     </form>
@@ -136,5 +148,3 @@ var header = document.getElementById("chooseMethod--choose");
             document.getElementById("e-wallet").className += " hide";
         }
     }
-
-
