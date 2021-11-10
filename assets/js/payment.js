@@ -74,7 +74,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                 </div>
             
                 <div class="form" id="form">
-                    <form id="e-banking" class="form__e-banking hide" action="../controllers/payment.php">
+                    <form id="e-banking" class="form__e-banking hide" action="../controllers/payment.php" method="postt">
                         <label for="bank">Chọn ngân hàng:</label>
                         <select id="bank" name="bank">
                             <option value="ACB">Ngân hàng Á Châu (ACB)</option>
@@ -91,7 +91,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
         
                     </form>
         
-                    <form id="e-wallet" class="form__e-wallet" action="../controllers/payment.php">
+                    <form id="e-wallet" class="form__e-wallet" action="../controllers/payment.php" method="post">
                         <label for="bank">Chọn Ví điện tử:</label>
                         <select id="e-wallet" name="e-wallet">
                             <option value="zalo">Zalo Pay</option>
