@@ -118,20 +118,7 @@ showModal.forEach(ele => {
         })
     });
 })
-document.getElementById("button_payment").addEventListener("click", function () {
-    var arrData = [];
-    var container_cart = Array.from(document.getElementsByClassName('container_cart'));
-    container_cart.forEach(ele => {
-        var obj = {};
-        var id = ele.getElementsByClassName('container_cart_item')[0].getAttribute('id');
-        var quantity = ele.getElementsByClassName('cart_info_quantity')[0].textContent;
-        obj.id = id;
-        obj.quantity = quantity;
-        arrData.push(obj);
-    })
-    // console.log(arrData)
-    
-});
+
 
 
 

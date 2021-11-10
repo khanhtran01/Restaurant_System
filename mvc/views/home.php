@@ -29,9 +29,13 @@ $home_url = getUrl().'/';
         <?php require_once "./mvc/views/pages/homePages.php";?>
         
     </div>
+    <div class="__payment-view">
+
+    </div>
     
 
 
     <script src="./assets/js/foodjs.js"></script>
+    <script src="./assets/js/payment.js"></script>
 </body>
 </html>
