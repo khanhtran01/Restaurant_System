@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                                                     <div class="cart_info_quantity">1</div>
                                                     <button class="cart_info_button_plus">+</button>
                                                 </div>
-                                                <div class="container_cart_info_price">${object.price}</div>
+                                                <div class="container_cart_info_price">${object.price}đ</div>
                                             </div>
                                         </div>
                                         <div class="__delete-in-cart"><i class="bi bi-x"></i></div>

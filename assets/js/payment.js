@@ -28,7 +28,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
             <div class="product-list">
                 <div class="list-header row">
                     <div class="product-name col-6">Tên món ăn</div>
-                    <div class="product-price col-2">Đơn giá</div>
+                    <div class="product-price col-2"></div>
                     <div class="product-count col-2">Số lượng</div>
                     <div class="product-total col-2">Thành tiền</div>
                 </div>
@@ -41,9 +41,9 @@ document.getElementById("button_payment").addEventListener("click", function () 
                 <img class="__box-img" src="${ele.img}">
             </div>
             <div class="product-name col-5">${ele.name}</div>
-            <div class="product-price col-2">50000đ</div>
+            <div class="product-price col-2"></div>
             <div class="product-count col-2">${ele.quantity}</div>
-            <div class="product-total col-2">${ele.price}</div>
+            <div class="product-total col-2">${ele.price}đ</div>
         </div>`
     })
     paymentView +=`
@@ -52,7 +52,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                     <div class="total-blank1 col-7"></div>
                     <div class="total-blank2 col-1"></div>
                     <div class="total-text col-2">TỔNG TIỀN</div>
-                    <div class="total-num col-2">${totalPrice}</div>
+                    <div class="total-num col-2">${totalPrice}đ</div>
                 </div>
             </div>
     
@@ -77,7 +77,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                         </select>
                         <label for="seri">Số seri:</label>
                         <input type="text" name="seri" id="seri">
-                        <p class="price">Tổng tiền : ${totalPrice}</p>
+                        <p class="price">Tổng tiền : ${totalPrice}đ</p>
                         <input type="submit" value="Thanh toán">
         
                     </form>
@@ -90,7 +90,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                         </select>
                         <label for="seri">Số điện thoại:</label>
                         <input type="text" name="phone" id="phone" placeholder="Phone number">
-                        <p class="price">Tổng tiền : 195000đ</p>
+                        <p class="price">Tổng tiền : ${totalPrice}đ</p>
         
                         <input type="submit" value="Thanh toán">
                     </form>
