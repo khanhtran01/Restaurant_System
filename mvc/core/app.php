@@ -11,7 +11,6 @@ class app{
     function __construct(){
  
         $arr = $this->UrlProcess();
-        print_r($arr);
         // Controller
         if( file_exists("./mvc/controllers/".$arr[0].".php") ){
             $this->controller = $arr[0];

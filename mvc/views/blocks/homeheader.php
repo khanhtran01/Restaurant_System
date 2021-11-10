@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="nav_bar_up_login">
-                    <a>Xin chào: Khắc Bảo</a>
+                <a >Xin chào: Khắc Bảo</a>
                     <a href="">Đăng xuất</a>
                 </div>
             </div>
