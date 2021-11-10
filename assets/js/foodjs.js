@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                                                 <div class="container_cart_info_price">${object.price}</div>
                                             </div>
                                         </div>
+                                        <div class="__delete-in-cart"><i class="bi bi-x"></i></div>
                                     </div>
                                 </div>`;
                                
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             //incre, decrea quantity event
             var quantityDecre = Array.from(document.querySelectorAll('.cart_info_button-'));
             var quantityincre = Array.from(document.querySelectorAll('.cart_info_button_plus'));
+            var deleteInCart = Array.from(document.querySelectorAll('.__delete-in-cart'));
             quantityDecre.forEach(ele => {
                 ele.onclick = () => {
                     var count = ele.parentNode.querySelector('.cart_info_quantity').textContent;
@@ -67,6 +69,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     count++;
                     ele.parentNode.parentNode.querySelector('.container_cart_info_price').innerText = Number(object.price) * Number(count);
                     ele.parentNode.querySelector('.cart_info_quantity').innerText = count;
+                }
+            })
+            deleteInCart.forEach(ele => {
+                ele.onclick = () => {
+                    ele.parentNode.parentNode.parentNode.innerHTML = '';
                 }
             })
 
@@ -122,6 +129,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
         obj.quantity = quantity;
         arrData.push(obj);
     })
+    // console.log(arrData)
     
 });
 
