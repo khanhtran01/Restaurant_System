@@ -74,7 +74,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                 </div>
             
                 <div class="form" id="form">
-                    <form id="e-banking" class="form__e-banking hide" action="../controllers/payment.php" method="postt">
+                    <form id="e-banking" class="form__e-banking hide" action="../controllers/payment.php" method="post">
                         <label for="bank">Chọn ngân hàng:</label>
                         <select id="bank" name="bank">
                             <option value="ACB">Ngân hàng Á Châu (ACB)</option>
