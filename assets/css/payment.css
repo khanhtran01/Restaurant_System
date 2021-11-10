@@ -285,7 +285,7 @@
     border: solid var(--main--color) 1px;
     border-radius: 5px;
 }
-.active ,.chooseMethod--method:hover{
+.active--payment ,.chooseMethod--method:hover{
     background-color: var(--main--color) !important;
     color: white !important ;
 }
