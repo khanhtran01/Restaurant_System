@@ -24,25 +24,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
         </div>
     </div>
     <div class="full-content">
-        <div class="container">
-            <div class="customer-info">
-                <div class="info-header">
-                    ĐỊA CHỈ NHẬN HÀNG
-                </div>
-                <div class="info-body row">
-                    <div class="info-name_mobile col-4">
-                        <div class="info-name">Lê Hồ Hoài Bão</div>
-                        <div class="info-mobile">(+84)854557858</div>
-                    </div>
-                    <div class="info-address col-6">
-                        Phường Linh Trung, TP.Thủ Đức, TPHCM
-                    </div>
-                    <div class="info-change col-2">
-                        <div class="change_info-btn">THAY ĐỔI</div>
-                    </div>
-                </div>
-            </div>
-    
+        <div class="container">    
             <div class="product-list">
                 <div class="list-header row">
                     <div class="product-name col-6">Tên món ăn</div>
