@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 class Home extends controller{
 
     public function viewHome(){
@@ -14,6 +17,30 @@ class Home extends controller{
             'product' => $product,
         ]);
     }
+    public function pay(){
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // collect value of input field
+            $userID = $_POST['user_ID'];
+            $arrProductID = $_POST['arr_id'];
+            $arrAmountProduct = $_POST['arr_quality'];
+            $Price = $_POST['price'];
+            
+            echo "<script>alert('".gettype($arrAmountProduct)."')</script>";
+
+            $this->model('PaymentModel')->updateBill([
+                "userID" => $userID,
+                "arrProduct" => $arrProductID,
+                "price" => $Price,
+                "arrAmount" => $arrAmountProduct
+            ]);
+            
+        
+        $productsByType = $this->model('ProductsModel')->getProductByType();
+        $this->view("home", [
+            "productsByType" => $productsByType
+        ]);
+    }
+}
 }
 ?>
 

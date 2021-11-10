@@ -40,7 +40,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
     arrData.forEach(ele => {
         totalPrice += +ele.price;
         ArrIDProduct.push(ele.id);
-        ArrProductQuality.push(ele.quality);
+        ArrProductQuality.push(ele.quantity);
         paymentView += `
         <div class="product row">
             <div class="product-img col-1">
@@ -58,7 +58,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                     <div class="total-blank1 col-7"></div>
                     <div class="total-blank2 col-1"></div>
                     <div class="total-text col-2">TỔNG TIỀN</div>
-                    <div class="total-num col-2">${totalPrice}</div>
+                    <div class="total-num col-2">${totalPrice}đ</div>
                 </div>
             </div>
     
@@ -74,7 +74,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                 </div>
             
                 <div class="form" id="form">
-                    <form id="e-banking" class="form__e-banking hide" action="../controllers/payment.php" method="post">
+                    <form id="e-banking" class="form__e-banking hide" action="home/pay" method="post">
                         <label for="bank">Chọn ngân hàng:</label>
                         <select id="bank" name="bank">
                             <option value="ACB">Ngân hàng Á Châu (ACB)</option>
@@ -86,12 +86,13 @@ document.getElementById("button_payment").addEventListener("click", function () 
                         <p class="price">Tổng tiền : ${totalPrice}</p>
                         <input type="hidden" name="arr_id" id="arr_id" value="${ArrIDProduct}">
                         <input type="hidden" name="user_ID" id="userID" value="2">
+                        <input type="hidden" name="price" id="price" value="${totalPrice}">
                         <input type="hidden" name="arr_quality" id="arr_quality" value="${ArrProductQuality}">
                         <input type="submit" value="Thanh toán">
         
                     </form>
         
-                    <form id="e-wallet" class="form__e-wallet" action="../controllers/payment.php" method="post">
+                    <form id="e-wallet" class="form__e-wallet" action="home/pay" method="post">
                         <label for="bank">Chọn Ví điện tử:</label>
                         <select id="e-wallet" name="e-wallet">
                             <option value="zalo">Zalo Pay</option>
@@ -100,7 +101,9 @@ document.getElementById("button_payment").addEventListener("click", function () 
                         <label for="seri">Số điện thoại:</label>
                         <input type="text" name="phone" id="phone" placeholder="Phone number">
                         <p class="price">Tổng tiền : ${totalPrice}</p>
+
                         <input type="hidden" name="arr_id" id="arr_id" value="${ArrIDProduct}">
+                        <input type="hidden" name="price" id="price" value="${totalPrice}">
                         <input type="hidden" name="user_ID" id="userID" value="2">
                         <input type="hidden" name="arr_quality" id="arr_quality" value="${ArrProductQuality}">
         
