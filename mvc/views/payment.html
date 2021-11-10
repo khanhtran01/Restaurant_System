@@ -92,7 +92,7 @@
                 <div class="chooseMethod--choose" id="chooseMethod--choose">
                     <ul >
                         <li onclick="changemethod('e-banking')" class="chooseMethod--method">E-Banking</li>
-                        <li onclick="changemethod('e-wallet')" class="chooseMethod--method active">E-Wallet</li>
+                        <li onclick="changemethod('e-wallet')" class="chooseMethod--method active--payment">E-Wallet</li>
                     </ul>
                 </div>
                 
@@ -135,11 +135,11 @@
         
                     for (var i = 0; i < btns.length; i++) {
                         btns[i].addEventListener("click", function() {
-                            var current = document.getElementsByClassName("active");
+                            var current = document.getElementsByClassName("active--payment");
                             if (current.length > 0) {
-                                current[0].className = current[0].className.replace(" active", "");
+                                current[0].className = current[0].className.replace(" active--payment", "");
                             }
-                            this.className += " active";
+                            this.className += " active--payment";
                         });
                     }
                 </script>
