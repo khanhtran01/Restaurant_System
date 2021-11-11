@@ -4,7 +4,7 @@ use function PHPSTORM_META\type;
 
 class ManagerController extends controller{
 
-    public function viewHome(){
+    public function viewManagerController(){
         $this->view("orderManagerment", [
 
         ]);

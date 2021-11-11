@@ -2,7 +2,7 @@
 
 use function PHPSTORM_META\type;
 
-class login extends controller
+class register extends controller
 {
 
     public function viewregister()
