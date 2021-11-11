@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="../../assets/css/signin.css">
 </head>
 <body>
+    <?php
+        if (isset($_SESSION['complete'])){
+            echo "<script>alert('Đăng ký thành công')</script>";
+            unset($_SESSION['complete']);
+        }
+    ?>
     <div class="container">
         <div class="head--form">
             <h3>TECHFOOD</h3>
@@ -26,37 +32,47 @@
             </div>
         </div>
         <div class="my_content">
-            <form>
+            <form action="register/verify" method="post">
                 <label class="form-label" for="FirstName" id="first_name">Fisrt Name</label>
-                <input class="form-control" type="text" id="first_name_text">
+                <input name="Fname" class="form-control" type="text" id="first_name_text">
 
                 <br>
                 <label class="form-label" for="LastName" id="last_name">Last Name</label>
-                <input class="form-control" type="text" id="last_name_text">
+                <input name="Lname" class="form-control" type="text" id="last_name_text">
 
                 <br>
                 <label class="form-label" for="Age" id="age">Age</label>
-                <input class="form-control" type="text" id="age_int">
+                <input name="age" class="form-control" type="text" id="age_int">
 
                 <br>
 
                 
                 <label class="form-label" for="email" id="email">EMAIL ADDRESS</label>
-                <input class="form-control" type="email" id="email_text">
-
+                <input name ="email" class="form-control" type="email" id="email_text">
+                <?php
+                if (isset($_SESSION['errorRegister'])){
+                echo "<label style=\"color : red\" class=\"form-label\" for=\"email\">Email này đã có người sử dụng</label>";
+                unset($_SESSION['errorRegister']);
+                }
+                ?>
                 <br>
 
                 <label class="form-label" for="password" id="password">PASSWORD</label>
-                <input class="form-control" type="password" id="pasword_text">
+                <input name="pass" class="form-control" type="password" id="pasword_text">
 
                 <br>
                 <label class="form-label" for="re-password" id="re-password">REPASSWORD</label>
-                <input class="form-control" type="password" id="re-pasword_text">
-
+                <input name="repass" class="form-control" type="password" id="re-pasword_text">
+                <?php
+                if (isset($_SESSION['passerror'])){
+                echo "<label style=\"color : red\" class=\"form-label\" for=\"re-password\">Mật khẩu không trùng khớp</label>";
+                unset($_SESSION['passerror']);
+                }
+                ?>   
                 <br>
 
                 <div class="d-grid mt-2 mb-1">
-                    <button class="btn btn-primary"><span class="fw-bold">REGISTER</span></button>
+                    <input value="REGISTER" type="submit" class="btn btn-primary"><span class="fw-bold"></span></input>
                 </div>
                 <p></p>
                 <div class="text-center mb-5" id="forgot_pass">
