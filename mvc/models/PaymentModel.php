@@ -9,7 +9,7 @@ class PaymentModel extends db {
     }
 
     public function updateBill($info){
-        $query1 = "INSERT INTO bill (PayTime, Total, Customer_ID) VALUE ('".date("Y-m-d")."','". $info['price'] ."','".$info['userID']. "')";
+        $query1 = "INSERT INTO bill (PayTime, Total, Customer_ID,complete) VALUE ('".date("Y-m-d")."','". $info['price'] ."','".$info['userID']. "',0)";
         $id = $this -> _query($query1);
         
         $arrProduct = explode(',',$info['arrProduct']);
@@ -18,7 +18,6 @@ class PaymentModel extends db {
             $query2 = "INSERT INTO bill_info (Bill_ID, Food_ID, Amount) VALUE ('".$id."','".$arrProduct[$i]."','".$arrAmount[$i]."')";
             $this->_query($query2);
         }
-        
     }
 }
 ?>
