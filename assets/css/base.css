@@ -259,7 +259,7 @@
     height: calc(100% - 50px - 40px);
     overflow: scroll;
 }
-.button_payment{
+.button-finish{
     margin-left: 1000px;
     /* margin-right: 10px; */
     margin-bottom: -15px;
