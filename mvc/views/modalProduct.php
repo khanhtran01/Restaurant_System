@@ -5,7 +5,7 @@ $output = '<div class="content_top">
 </div>
 <div class="content_top_sale">
     <h2 class="content_top_name">'.$product['Name'].'</h2>
-    <div class="content_top_price">Price: '.$product['Price'].'VND</div>
+    <div class="content_top_price">Price: '.$product['Price'].'đ</div>
 </div>
 </div>
 <div class="content_bottom">

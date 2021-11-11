@@ -7,7 +7,8 @@ document.getElementById("button_payment").addEventListener("click", function () 
         var quantity = ele.getElementsByClassName('cart_info_quantity')[0].textContent;
         obj.id = id;
         obj.name = ele.querySelector('.cart_info_name').textContent;
-        obj.price = ele.querySelector('.container_cart_info_price').textContent
+        obj.price = ele.querySelector('.container_cart_info_price > span').textContent
+        obj.dongia = parseFloat(obj.price) / parseFloat(quantity)
         obj.quantity = quantity;
         obj.img = ele.querySelector('img').getAttribute('src')
         arrData.push(obj);
@@ -28,14 +29,14 @@ document.getElementById("button_payment").addEventListener("click", function () 
             <div class="product-list">
                 <div class="list-header row">
                     <div class="product-name col-6">Tên món ăn</div>
-                    <div class="product-price col-2"></div>
+                    <div class="product-price col-2">Đơn giá</div>
                     <div class="product-count col-2">Số lượng</div>
                     <div class="product-total col-2">Thành tiền</div>
                 </div>
                 <div class="show-product">`
-                var ArrIDProduct = [];
-                var ArrProductQuality = [];
-        arrData.forEach(ele => {
+    var ArrIDProduct = [];
+    var ArrProductQuality = [];
+    arrData.forEach(ele => {
         totalPrice += +ele.price
         ArrIDProduct.push(ele.id)
         ArrProductQuality.push(ele.quantity)
@@ -45,12 +46,12 @@ document.getElementById("button_payment").addEventListener("click", function () 
                 <img class="__box-img" src="${ele.img}">
             </div>
             <div class="product-name col-5">${ele.name}</div>
-            <div class="product-price col-2"></div>
+            <div class="product-price col-2">${ele.dongia}đ</div>
             <div class="product-count col-2">${ele.quantity}</div>
             <div class="product-total col-2">${ele.price}đ</div>
         </div>`
     })
-    paymentView +=`
+    paymentView += `
                 </div>
                 <div class="total row">
                     <div class="total-blank1 col-7"></div>
@@ -81,7 +82,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                 </select>
                 <label for="seri">Số seri:</label>
                 <input type="text" name="seri" id="seri">
-                <p class="price">Tổng tiền : ${totalPrice}</p>
+                <p class="price">Tổng tiền : ${totalPrice}đ</p>
                 <input type="hidden" name="arr_id" id="arr_id" value="${ArrIDProduct}">
                 <input type="hidden" name="user_ID" id="userID" value="2">
                 <input type="hidden" name="price" id="price" value="${totalPrice}">
@@ -98,7 +99,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
             </select>
             <label for="seri">Số điện thoại:</label>
             <input type="text" name="phone" id="phone" placeholder="Phone number">
-            <p class="price">Tổng tiền : ${totalPrice}</p>
+            <p class="price">Tổng tiền : ${totalPrice}đ</p>
             <input type="hidden" name="arr_id" id="arr_id" value="${ArrIDProduct}">
             <input type="hidden" name="price" id="price" value="${totalPrice}">
             <input type="hidden" name="user_ID" id="userID" value="2">
@@ -111,41 +112,38 @@ document.getElementById("button_payment").addEventListener("click", function () 
             </div>
         </div>
     </div>`
-    // Add active class to the current button (highlight it)
-    
 
     document.querySelector('.__payment-view').innerHTML = paymentView
     document.querySelector('.back-btn').addEventListener("click", function () {
         document.querySelector('.app').classList.remove('displayNode')
         document.querySelector('.__payment-view').innerHTML = ''
     })
-    // console.log(arrData)
 
 });
 var header = document.getElementById("chooseMethod--choose");
-    var btns = header.getElementsByClassName("chooseMethod--method");
+var btns = header.getElementsByClassName("chooseMethod--method");
 
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-            var current = document.getElementsByClassName("active--payment");
-            if (current.length > 0) {
-                current[0].className = current[0].className.replace(" active--payment", "");
-            }
-            this.className += " active--payment";
-        });
-    }
-
-
-    function changemethod(id) {
-        if (id == "e-wallet") {
-            current = document.getElementById(id);
-            current.classList.remove("hide")
-            document.getElementById("e-banking").className += " hide";
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active--payment");
+        if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active--payment", "");
         }
-        if (id == "e-banking") {
-            current = document.getElementById(id);
-            current.classList.remove("hide")
-            document.getElementById("e-wallet").className += " hide";
-        }
+        this.className += " active--payment";
+    });
+}
+
+
+function changemethod(id) {
+    if (id == "e-wallet") {
+        current = document.getElementById(id);
+        current.classList.remove("hide")
+        document.getElementById("e-banking").className += " hide";
     }
+    if (id == "e-banking") {
+        current = document.getElementById(id);
+        current.classList.remove("hide")
+        document.getElementById("e-wallet").className += " hide";
+    }
+}
 

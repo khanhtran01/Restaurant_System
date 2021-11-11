@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                                                     <div class="cart_info_quantity">1</div>
                                                     <button class="cart_info_button_plus">+</button>
                                                 </div>
-                                                <div class="container_cart_info_price">${object.price}đ</div>
+                                                <div class="container_cart_info_price"><span>${object.price}</span>đ</div>
                                             </div>
                                         </div>
                                         <div class="__delete-in-cart"><i class="bi bi-x"></i></div>
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     if (count == 1) { } else {
                         count--;
                     }
-                    ele.parentNode.parentNode.querySelector('.container_cart_info_price').innerText = Number(object.price) * Number(count);
+                    ele.parentNode.parentNode.querySelector('.container_cart_info_price > span').innerText = Number(object.price) * Number(count);
                     ele.parentNode.querySelector('.cart_info_quantity').innerText = count;
                 }
             })
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 ele.onclick = () => {
                     var count = ele.parentNode.querySelector('.cart_info_quantity').textContent;
                     count++;
-                    ele.parentNode.parentNode.querySelector('.container_cart_info_price').innerText = Number(object.price) * Number(count);
+                    ele.parentNode.parentNode.querySelector('.container_cart_info_price > span').innerText = Number(object.price) * Number(count);
                     ele.parentNode.querySelector('.cart_info_quantity').innerText = count;
                 }
             })
