@@ -1,6 +1,11 @@
 <?php
 require_once "./mvc/core/basehref.php";
 $home_url = getUrl().'/';
+
+if (!$_SESSION['username']){
+    header("Location: " . geturl(). "/login");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

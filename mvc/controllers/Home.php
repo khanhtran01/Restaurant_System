@@ -25,7 +25,7 @@ class Home extends controller{
             $arrAmountProduct = $_POST['arr_quality'];
             $Price = $_POST['price'];
             
-            echo "<script>alert('".gettype($arrAmountProduct)."')</script>";
+            echo "<script>alert('Thanh toán thành công')</script>";
 
             $this->model('PaymentModel')->updateBill([
                 "userID" => $userID,

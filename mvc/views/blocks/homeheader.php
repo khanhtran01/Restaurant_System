@@ -17,8 +17,8 @@
                     </div>
                 </div>
                 <div class="nav_bar_up_login">
-                    <a >Xin chào: Khắc Bảo</a>
-                    <a href="">Đăng xuất</a>
+                    <a >Xin chào: <?=$_SESSION['username']?></a>
+                    <a href="logout">Đăng xuất</a>
                 </div>
             </div>
         </div>
