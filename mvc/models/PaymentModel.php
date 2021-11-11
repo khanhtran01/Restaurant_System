@@ -7,7 +7,7 @@ class PaymentModel extends db {
 
     public function updateBill($info){
         $query1 = "INSERT INTO bill (PayTime, Total, Customer_ID) VALUE ('".date("Y-m-d")."','". $info['price'] ."','".$info['userID']."')";
-        echo "<script>alert('".$query1."')</script>";
+        
         $this->_query($query1);
         $getLastIdsql = "SELECT ID FROM bill ORDER BY ID DESC LIMIT 1";
         $getLastId = $this->_query($getLastIdsql);

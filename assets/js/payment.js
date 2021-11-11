@@ -84,7 +84,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                 <input type="text" name="seri" id="seri">
                 <p class="price">Tổng tiền : ${totalPrice}đ</p>
                 <input type="hidden" name="arr_id" id="arr_id" value="${ArrIDProduct}">
-                <input type="hidden" name="user_ID" id="userID" value="<?php echo $_SESSION['userID']; ?>">
+                <input type="hidden" name="user_ID" id="userID" value="<?=$_SESSION['user_ID']?>">
                 <input type="hidden" name="price" id="price" value="${totalPrice}">
                 <input type="hidden" name="arr_quality" id="arr_quality" value="${ArrProductQuality}">
                 <input type="submit" value="Thanh toán">
@@ -102,7 +102,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
             <p class="price">Tổng tiền : ${totalPrice}đ</p>
             <input type="hidden" name="arr_id" id="arr_id" value="${ArrIDProduct}">
             <input type="hidden" name="price" id="price" value="${totalPrice}">
-            <input type="hidden" name="user_ID" id="userID" value="<?php echo $_SESSION['userID']; ?>">
+            <input type="hidden" name="user_ID" id="userID" value="<?php echo $_SESSION['user_ID'] ?>">
             <input type="hidden" name="arr_quality" id="arr_quality" value="${ArrProductQuality}">
 
             <input type="submit" value="Thanh toán">
