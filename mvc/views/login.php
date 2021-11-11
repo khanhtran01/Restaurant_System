@@ -43,6 +43,7 @@ $home_url = getUrl().'/';
                 <input name="pass" class="form-control" type="password" id="pasword_text">
 
                 <br>
+                
                 <?php
                 if (!isset($_SESSION['error']) || $_SESSION['error'] == True ){
                 echo "<label style=\"color : red\" class=\"form-label\" for=\"password\" id=\"password\">Sai tài khoảng hoặc mật khẩu</label>";
