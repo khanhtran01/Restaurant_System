@@ -27,9 +27,11 @@ class login extends controller
             header("Location: " . geturl(). "/login");
 
         }else {
-            $_SESSION['error'] = False;
-            $_SESSION['username'] = $data['Fname'] . $data['Lname'];
-            echo $_SESSION['username'];
+            // $_SESSION['error'] = False;
+            unset($_SESSION['error']);
+            $_SESSION['username'] = $data['Fname'] ." ". $data['Lname'];
+            // $_SESSION['username'] = $data['ID'];
+            $_SESSION['user_ID'] = $data['ID'];
             header("Location: " . geturl(). "/Home");
         }
     }

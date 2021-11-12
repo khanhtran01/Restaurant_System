@@ -29,7 +29,7 @@ if (!$_SESSION['username']){
     <link rel="stylesheet" href="./assets/fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Document</title>
+    <title>BK FOOD</title>
    
 </head>
 <body>
