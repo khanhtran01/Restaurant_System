@@ -1,4 +1,2 @@
-# Restaurant_System
-Bài tập lớn của nhóm CNPM HCMUT
-\\
-Mọi người chú ý là bỏ file front-end vào views nghe
+Vậy là cái web mình tạm xong
+các bạn vào check xem có điều chỉnh gì không
