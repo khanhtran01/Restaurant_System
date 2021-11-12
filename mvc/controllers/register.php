@@ -5,7 +5,7 @@ use function PHPSTORM_META\type;
 class register extends controller
 {
 
-    public function viewregister()
+    public function viewHome()
     {
         $this->view("register");
     }
