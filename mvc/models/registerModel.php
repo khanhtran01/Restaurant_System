@@ -15,8 +15,6 @@ class registerModel extends db {
         }
         if (empty($data)){
             if ($info['pass'] != $info['repass']){
-                echo "<script>alert('sai mk') </script>";
-
                 $_SESSION['passerror'] = True;
                 return "0";
             }

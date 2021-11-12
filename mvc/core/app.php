@@ -16,9 +16,9 @@ class app{
             $this->controller = $arr[0];
             unset($arr[0]);
         }
-        if (!isset($arr[1])){
-            $this->action = "view". $this->controller."";
-        }
+        // if (!isset($arr[1])){
+        //     $this->action = "view". $this->controller."";
+        // }
         require_once "./mvc/controllers/". $this->controller .".php";
         $this->controller = new $this->controller;
         // Action

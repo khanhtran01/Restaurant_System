@@ -17,7 +17,6 @@ class PaymentModel extends db {
         for ($i = 0; $i < count($arrProduct); $i++){
             $query2 = "INSERT INTO bill_info (Bill_ID, Food_ID, quantity) VALUE ('".$getLastId['ID']."','".$arrProduct[$i]."','".$arrAmount[$i]."')";
             $this->_query($query2);
-
         }
     }
 }

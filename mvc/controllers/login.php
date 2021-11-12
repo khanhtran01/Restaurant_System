@@ -5,7 +5,7 @@ use function PHPSTORM_META\type;
 class login extends controller
 {
 
-    public function viewlogin()
+    public function viewHome()
     {
         // $productsByType = $this->model('ProductsModel')->getProductByType();
         if (!isset($_SESSION['error'])){

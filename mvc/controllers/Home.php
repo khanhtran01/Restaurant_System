@@ -34,6 +34,7 @@ class Home extends controller{
                 "arrAmount" => $arrAmountProduct
             ]);
             
+            echo "<script>alert('Thanh toán thành công')</script>";
         
         $productsByType = $this->model('ProductsModel')->getProductByType();
         $this->view("home", [
