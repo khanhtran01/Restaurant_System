@@ -14,16 +14,19 @@ $home_url = getUrl().'/';
     <title>Signin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../assets/css/signin.css">
+
+    <link rel="stylesheet" href="assets/css/signin.css">
+    
+
 </head>
 <body>
     <div class="container">
         <div class="head--form">
-            <h3>TECHFOOD</h3>
+            <h3 class="fw-bold">TECHFOOD</h3>
         </div>
         <div id="change_option">
             <div id="sign_up">
-                <a href="register.html">REGISTER</a>
+                <a href="register">REGISTER</a>
             </div>
             <div class="d-flex" id="vertical_line">
                 <div class="vr"></div>
@@ -45,11 +48,13 @@ $home_url = getUrl().'/';
                 <br>
                 <?php
                 if (!isset($_SESSION['error']) || $_SESSION['error'] == True ){
-                echo "<label style=\"color : red\" class=\"form-label\" for=\"password\" id=\"password\">sai tai khoang hoac mat khau</label>";
+
+                echo "<label style=\"color : red\" class=\"form-label\" for=\"password\" id=\"password\">Email hoặc tài khoản không đúng</label>";
+
                 }
                 ?>
                 <div class="d-grid mt-2 mb-1">
-                    <input type="submit" class="btn btn-primary"><span class="fw-bold"></span></input>
+                    <button type="submit" class="btn btn-primary"><span class="fw-bold">LOGIN</span></button>
                 </div>
 
                 <div class="text-center mb-5" id="forgot_pass">
