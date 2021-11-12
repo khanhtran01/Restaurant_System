@@ -17,8 +17,8 @@
                     </div>
                 </div>
                 <div class="nav_bar_up_login">
-                    <a >Xin chào: Phạm Đạt</a>
-                    <a href="">Đăng xuất</a>
+                    <a >Xin chào: <?= $_SESSION['ho'] ?> <?= $_SESSION['ten'] ?></a>
+                    <a href="./ManagerController/logout">Đăng xuất</a>
                 </div>
             </div>
         </div>

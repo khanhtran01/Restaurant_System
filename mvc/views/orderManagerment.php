@@ -1,6 +1,9 @@
 <?php
 require_once "./mvc/core/basehref.php";
 $home_url = getUrl() . '/';
+if (!isset($_SESSION["manager"])) {
+    header("Location:" . getUrl() . "/ManagerController/login");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

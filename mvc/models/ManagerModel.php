@@ -4,7 +4,12 @@ class ManagerModel extends db {
     {
         return mysqli_query($this->connect, $sql);
     }
-
+    public function CheckLogin($username, $password){
+        $sql = "SELECT * FROM chefaccount WHERE Username ='" . $username . "' and Password = MD5('".$password."')";
+        $query = $this->_query($sql);
+        $row  = mysqli_fetch_array($query);
+        return $row;
+    }
     public function getOrders(){
         $allBillsql = "SELECT * FROM bill WHERE complete = 0 ORDER BY ID DESC";
         $query1 = $this->_query($allBillsql);
