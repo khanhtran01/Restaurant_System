@@ -5,36 +5,21 @@ class registerModel extends db {
         return mysqli_query($this->connect, $sql);
     }
 
-    public function checkAccount($info){
-        $sql = "SELECT * FROM account WHERE Email = '".$info['email']."'";
+    public function checkAccount($email){
+        $sql = "SELECT * FROM account WHERE Email = '".$email."'";
         // echo $sql;
         $query = $this->_query($sql);
-        $data = [];
-        while ($row = mysqli_fetch_assoc($query)) {
-            array_push($data, $row);
+        $num = mysqli_num_rows($query);
+        if($num == 0)   {
+            return true;
         }
-        if (empty($data)){
-            if ($info['pass'] != $info['repass']){
-                $_SESSION['passerror'] = True;
-                return "0";
-            }
-            $insert = "INSERT INTO account (`Fname`, `Lname`, `Age`, `Email`, `Password`) VALUE ('".$info['fname']."','" .$info['lname']. "','".$info['age']."','".$info['email']."','".md5($info['pass'])."')";
-            $this->_query($insert);
-            if (isset($_SESSION['passerror'])){
-                unset($_SESSION['passerror']);
-            }
-            if (isset( $_SESSION['errorRegister'])){
-                unset( $_SESSION['errorRegister']);
-            }
-            $_SESSION['complete'] = True;
-
-            return "1";
-        }
-        echo "<script>alert('sai email') </script>";
-
-        $_SESSION['errorRegister'] = True;
-        return "0";
+        return false;
+        
     }
-
+    public function newAccount($email, $password, $age, $fname, $lname){
+        $sql = "INSERT INTO account(email, password ,age, fname,lname)  VALUES('$email', '$password','$age','$fname','$lname')";
+        $query = $this->_query($sql);
+        return $query;
+    }
 }
 ?>
