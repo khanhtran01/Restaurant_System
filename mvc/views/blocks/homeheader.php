@@ -43,10 +43,6 @@
                             <img src="https://cdn-icons-png.flaticon.com/512/2738/2738730.png" alt="">
                             <p>Drink</p>
                         </li>
-                        <li>
-                            <a href=""><i class="bi bi-file-earmark-person"></i></a>
-                            <a href="">About</a>
-                        </li>
                         <?php //endforeach; ?>
                     </ul>
                 </div>

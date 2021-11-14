@@ -36,13 +36,12 @@ if (!$_SESSION['username']){
     <div class="app">
         <?php require_once "./mvc/views/blocks/homeheader.php";?>
         <?php require_once "./mvc/views/pages/homePages.php";?>
+        <?php require_once "./mvc/views/blocks/footer.php";?>
         
     </div>
     <div class="__payment-view ">
     
     </div>
-    
-
 
     <script src="./assets/js/foodjs.js"></script>
     <script src="./assets/js/payment.js"></script>
