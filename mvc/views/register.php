@@ -19,10 +19,12 @@ $home_url = getUrl().'/';
 </head>
 <body>
    
-    <div class="container">
+    <div class="container" style="font-family: 'Dancing Script', cursive;">
         <div class="head--form">
         <img  class = "logobk" style = "height: 62px; width: 62px; margin: 0 4px 4px 0 "src="assets/img/logobk.png" alt="logobk">
-            <h3>TECHFOOD</h3>
+            <h3 style="font-family: 'Dancing Script', cursive; font-size: 40px">
+                TECHFOOD
+            </h3>
         </div>
         <div id="change_option">
         <div id="sign_in">
@@ -52,16 +54,16 @@ $home_url = getUrl().'/';
                 <br>
 
                 
-                <label class="form-label" for="email" id="email">EMAIL ADDRESS</label>
+                <label class="form-label" for="email" id="email">Email Address</label>
                 <input name ="email" class="form-control" type="email" id="email_text">
                 
                 <br>
 
-                <label class="form-label" for="password" id="password">PASSWORD</label>
+                <label class="form-label" for="password" id="password">Password</label>
                 <input name="pass" class="form-control" type="password" id="password_text">
 
                 <br>
-                <label class="form-label" for="re-password" id="re-password">REPASSWORD</label>
+                <label class="form-label" for="re-password" id="re-password">Re-password</label>
                 <input name="repass" class="form-control" type="password" id="re-password_text">
                 
                 <br>

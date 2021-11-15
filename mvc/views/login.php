@@ -17,10 +17,13 @@ $home_url = getUrl().'/';
     <link rel="stylesheet" href="assets/css/signin.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="font-family: 'Dancing Script', cursive;">
         <div class="head--form">
         <img  class = "logobk" style = "height: 62px; width: 62px; margin: 0 4px 4px 0 "src="assets/img/logobk.png" alt="logobk">
-            <h3>TECHFOOD</h3>
+            <h3 style="font-family: 'Dancing Script', cursive; font-size: 40px">
+                TECHFOOD
+
+            </h3>
         </div>
         <div id="change_option">
             <div id="sign_up">
@@ -35,12 +38,12 @@ $home_url = getUrl().'/';
         </div>
         <div class="my_content">
             <form action="login/verify" method="post">
-                <label class="form-label" for="email" id="email">EMAIL ADDRESS</label>
+                <label class="form-label" for="email" id="email">Email Address</label>
                 <input name="email" class="form-control" type="email" id="email_text">
 
                 <br>
 
-                <label class="form-label" for="password" id="password">PASSWORD</label>
+                <label class="form-label" for="password" id="password">Password</label>
                 <input name="pass" class="form-control" type="password" id="pasword_text">
 
                 <br>
@@ -51,7 +54,7 @@ $home_url = getUrl().'/';
                 }
                 ?>
                 <div class="d-grid mt-2 mb-1">
-                    <input type="submit" class="btn btn-primary"><span class="fw-bold"></span></input>
+                    <button type="submit" class="btn btn-primary"><span class="fw-bold">LOGIN</span></button>
                 </div>
 
                 <div class="text-center mb-5" id="forgot_pass">
