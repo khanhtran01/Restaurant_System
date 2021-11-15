@@ -19,6 +19,7 @@ $home_url = getUrl().'/';
 <body>
     <div class="container">
         <div class="head--form">
+        <img  class = "logobk" style = "height: 62px; width: 62px; margin: 0 4px 4px 0 "src="assets/img/logobk.png" alt="logobk">
             <h3>TECHFOOD</h3>
         </div>
         <div id="change_option">
