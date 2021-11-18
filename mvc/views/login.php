@@ -50,7 +50,7 @@ $home_url = getUrl().'/';
                 
                 <?php
                 if (!isset($_SESSION['error']) || $_SESSION['error'] == True ){
-                echo "<label style=\"color : red\" class=\"form-label\" for=\"password\" id=\"password\">Sai tài khoảng hoặc mật khẩu</label>";
+                echo "<label style=\"color : red\" class=\"form-label\" for=\"password\" id=\"password\">Sai tài khoản hoặc mật khẩu</label>";
                 }
                 ?>
                 <div class="d-grid mt-2 mb-1">
