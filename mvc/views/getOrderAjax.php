@@ -6,8 +6,7 @@
             <div class="b4-grid-row">
                 <div class="header_cart">
                     <i class="bi bi-cart-check-fill"></i>
-                    <div class="your_cart"> Order <span>1</span></div>
-                    <div class="your_cart_id"> Order ID <span>'.$order['ID'].'</span></div>
+                    <div class="your_cart"> Order <span>'.$order['ID'].'</span></div>
                 </div>
                 <div class="grid__row">';
         foreach($order['foods'] as $food){
