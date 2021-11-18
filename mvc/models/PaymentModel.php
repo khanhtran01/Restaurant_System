@@ -16,7 +16,9 @@ class PaymentModel extends db {
         $arrAmount = explode(',',$info['arrAmount']);
         for ($i = 0; $i < count($arrProduct); $i++){
             $query2 = "INSERT INTO bill_info (Bill_ID, Food_ID, quantity) VALUE ('".$getLastId['ID']."','".$arrProduct[$i]."','".$arrAmount[$i]."')";
+            $updateAmount = "UPDATE `food` SET `Amount` = (SELECT Amount FROM `food` WHERE `food`.`ID` = ".$arrProduct[$i].") - ".$arrAmount[$i]." WHERE `food`.`ID` = ".$arrProduct[$i].";";
             $this->_query($query2);
+            $this->_query($updateAmount);
         }
     }
 }
