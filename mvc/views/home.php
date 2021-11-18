@@ -39,7 +39,7 @@ if (!$_SESSION['username']){
         <?php require_once "./mvc/views/blocks/footer.php";?>
         
     </div>
-    <div class="__payment-view ">
+    <div class="__payment-view " style="font-family: 'Dancing Script', cursive;">
     
     </div>
 
