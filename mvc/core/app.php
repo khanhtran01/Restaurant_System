@@ -12,9 +12,11 @@ class app{
  
         $arr = $this->UrlProcess();
         // Controller
-        if( file_exists("./mvc/controllers/".$arr[0].".php") ){
-            $this->controller = $arr[0];
-            unset($arr[0]);
+        if(isset($arr)){
+            if( file_exists("./mvc/controllers/".$arr[0].".php") ){
+                $this->controller = $arr[0];
+                unset($arr[0]);
+            }
         }
         // if (!isset($arr[1])){
         //     $this->action = "view". $this->controller."";
