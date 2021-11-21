@@ -42,10 +42,10 @@ document.getElementById("button_payment").addEventListener("click", function () 
         ArrProductQuality.push(ele.quantity)
         paymentView += `
         <div class="product row">
-            <div class="product-img col-sm-1">
+            <div class="product-img col-1">
                 <img class="__box-img" src="${ele.img}">
             </div>
-            <div class="product-name col-sm-5 col-6">${ele.name}</div>
+            <div class="product-name col-5">${ele.name}</div>
             <div class="product-price col-2">${ele.dongia}đ</div>
             <div class="product-count col-2">${ele.quantity}</div>
             <div class="product-total col-2">${ele.price}đ</div>
@@ -54,8 +54,10 @@ document.getElementById("button_payment").addEventListener("click", function () 
     paymentView += `
                 </div>
                 <div class="total row">
-                    <div class="total-text col-md-2 col-sm-3 col-4">TỔNG TIỀN</div>
-                    <div class="total-num col-md-2 col-sm-3 col-4">${totalPrice}đ</div>
+                    <div class="total-blank1 col-7"></div>
+                    <div class="total-blank2 col-1"></div>
+                    <div class="total-text col-2">TỔNG TIỀN</div>
+                    <div class="total-num col-2">${totalPrice}đ</div>
                 </div>
             </div>
     
@@ -64,8 +66,10 @@ document.getElementById("button_payment").addEventListener("click", function () 
                     Chọn phương thức thanh toán:
                 </div>
                 <div class="chooseMethod--choose" id="chooseMethod--choose">
-                    <div onclick="changemethod('e-banking')" class="col-lg-2 col-md-3 col-4 chooseMethod--method">E-Banking</div>
-                    <div onclick="changemethod('e-wallet')" class="col-lg-2 col-md-3 col-4 chooseMethod--method active">E-Wallet</div>
+                    <ul >
+                        <li onclick="changemethod('e-banking')" class="chooseMethod--method">E-Banking</li>
+                        <li onclick="changemethod('e-wallet')" class="chooseMethod--method active--payment">E-Wallet</li>
+                    </ul>
                 </div>
             
                 <div class="form" id="form">
