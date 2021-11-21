@@ -1,7 +1,7 @@
-/* * {
+* {
     margin: 0px;
     padding: 0px;
-} */
+}
 
 .__payment-view {
     --main--color :rgba(49,50,88,255);
@@ -13,13 +13,20 @@
     --bs-gutter-x: 0rem !important;
 }
 
-/* .header
+.product-img {
+    display: none;
+}
+
+.header
 {
-    margin-bottom: 10px;
-} */
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
 
 .full-content
 {
+    margin-top: 50px;
     padding: 10px 0;
     background-color: #e1f5ff;
 }
@@ -112,7 +119,6 @@
 
 .product-list
 {
-    /* height: 200px; */
     background-color: white;
     margin: 10px 0;
     padding: 10px 10px;
@@ -152,8 +158,8 @@
 
 .__box-img
 {
-    width: 85px;
-    height: 65px;
+    width: 30px;
+    height: 30px;
 }
 
 .total
@@ -163,22 +169,17 @@
     justify-content: end;
 }
 
-.total-blank1
-{
-    background-color: white;
-}
-
 .total-text
 {
     line-height: 50px;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .total-num
 {
     line-height: 50px;
-    font-size: 24px;
+    font-size: 20px;
     text-align: right;
     padding-right: 10px;
 }
@@ -265,22 +266,24 @@
     cursor: pointer;
 }
 
-.chooseMethod{
-    margin-top: 10px;
+.chooseMethod
+{
     padding: 5px;
     background-color: white;
 }
 
+.chooseMethod--title
+{
+    padding-bottom: 10px;
+}
 .chooMethod--choose {
     list-style-type: none;
-    margin: 5px 0px 5px 15px;
 }
 
-.chooseMethod--choose li {
-    padding: 3px 10px;
-    margin: 0px 5px;
+.chooseMethod--method {
+    padding: 5px 5px;
+    margin-left: 10px;
     list-style-type: none;
-    float: left;
     color: black;
     border: solid var(--main--color) 1px;
     border-radius: 5px;
@@ -336,4 +339,12 @@ input[type=submit] {
     text-align: center;
     height: 60px;
     background-color: var(--main--color);
+}
+
+@media (min-width: 576px) 
+{
+    .product-img
+    {
+        display: block;
+    }
 }
