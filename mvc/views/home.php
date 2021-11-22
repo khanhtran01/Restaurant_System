@@ -28,6 +28,7 @@ if (!$_SESSION['username']){
     <link rel="stylesheet" href="./assets/css/payment.css">
     <link rel="stylesheet" href="./assets/fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>BK FOOD</title>
    

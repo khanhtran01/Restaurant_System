@@ -302,7 +302,7 @@
                 </li>
                 <li>
                     <span><i class="fa fa-envelope"></i></span>
-                    <p><a href="#">bku@gmail.com</a></p>
+                    <p><a href="#">bku@hcmut.edu.vn</a></p>
                 </li>
             </ul>
         </div>
