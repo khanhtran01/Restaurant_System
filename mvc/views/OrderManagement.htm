@@ -60,10 +60,7 @@
                                 </li>
                                 <li>
                                     <i class="bi bi-file-earmark-person"></i>
-                                    <a href="">Order in ling</a>
-                                </li>
-                                <li>
-                                    <button onclick="Rando"> Add random order (doesn't work)</button>
+                                    <a href="">Order in line</a>
                                 </li>
                             </ul>
                         </div>
@@ -76,20 +73,20 @@
         </div>
         <div   class="container_app">
             <div id="parent" class="grid">
-                    <div id="item1" class="col">
+                    <div id="item1" class="orderbox">
                         <div class="b4-grid-row">
                             <div class="header_cart">
                                 <i class="bi bi-cart-check-fill"></i>
                                 <div class="your_cart"> Order <span>1</span></div>
-                                <div class="your_cart_id"> Order ID <span>110621300</span></div>
+                                <div class="order_id"> Order ID <span>110621300</span></div>
                             </div>
                             <div class="grid__row">
                                     <div class="col-2">
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.daylambanh.edu.vn/wp-content/uploads/2017/08/cach-lam-banh-hamburger-bo-600x400.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Hambuger</div>
-                                                <div class="item_quantity">Số lượng: 2</div>                                             
+                                                <div class="item_name_OM">Hambuger</div>
+                                                <div class="item_quantity_OM">Số lượng: 2</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -97,8 +94,8 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://image.thanhnien.vn/1024/uploaded/congthang/2019_10_09/anh_1_dzzf.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bún bò</div>
-                                                <div class="item_quantity">Số lượng: 2</div>                                             
+                                                <div class="item_name_OM">Bún bò</div>
+                                                <div class="item_quantity_OM">Số lượng: 2</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -106,55 +103,55 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://i.ytimg.com/vi/cJu6tFJe_Gc/maxresdefault.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Cơm sườn 2</div>
-                                                <div class="item_quantity">Số lượng: 2</div>                                             
+                                                <div class="item_name_OM">Cơm sườn 2</div>
+                                                <div class="item_quantity_OM">Số lượng: 2</div>                                             
                                             </div>
                                         </div>
                                     </div>
 
                                 
                             </div>
-                            <br><button onclick="FinishFunc('item1')" class="button_payment"> Finish</button><br>
+                            <br><button onclick="FinishFunc('item1')" class="finish_food"> Finish</button><br>
                         </div>
                     </div>
 
-                    <div id="item2" class="col">
+                    <div id="item2" class="orderbox">
                         <div class="b4-grid-row">
                             <div class="header_cart">
                                 <i class="bi bi-cart-check-fill"></i>
                                 <div class="your_cart"> Order <span>2</span></div>
-                                <div class="your_cart_id"> Order ID <span>110621301</span></div>
+                                <div class="order_id"> Order ID <span>110621301</span></div>
                             </div>             
                             <div class="grid__row">
                                     <div class="col-2">
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bánh mì</div>
-                                                <div class="item_quantity">Số lượng: 69</div>                                             
+                                                <div class="item_name_OM">Bánh mì</div>
+                                                <div class="item_quantity_OM">Số lượng: 69</div>                                             
                                             </div>
                                         </div>
                                     </div>
 
                             </div>
-                            <br><button onclick="FinishFunc('item1')" class="button_payment"> Finish</button><br>
+                            <br><button onclick="FinishFunc('item2')" class="finish_food"> Finish</button><br>
                         </div>
                     </div>
 
-                    <div id="item3" class="col">
+                    <div id="item3" class="orderbox">
                         <div class="b4-grid-row">
                             <div class="header_cart">
                                 <i class="bi bi-cart-check-fill"></i>
                                 <div class="your_cart"> Order <span>3</span></div>
-                                <div class="your_cart_id"> Order ID <span>110621302</span></div>
+                                <div class="order_id"> Order ID <span>110621302</span></div>
                             </div>           
                             <div class="grid__row">
                                     <div class="col-2">
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bánh mì</div>
-                                                <div class="item_quantity">Số lượng: 1</div>                                             
+                                                <div class="item_name_OM">Bánh mì</div>
+                                                <div class="item_quantity_OM">Số lượng: 1</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -162,8 +159,8 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bánh mì</div>
-                                                <div class="item_quantity">Số lượng: One</div>                                             
+                                                <div class="item_name_OM">Bánh mì</div>
+                                                <div class="item_quantity_OM">Số lượng: One</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -171,8 +168,8 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bánh mì</div>
-                                                <div class="item_quantity">Số lượng: Một</div>                                             
+                                                <div class="item_name_OM">Bánh mì</div>
+                                                <div class="item_quantity_OM">Số lượng: Một</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -180,8 +177,8 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bánh mì</div>
-                                                <div class="item_quantity">Số lượng: 3 trừ 2</div>                                             
+                                                <div class="item_name_OM">Bánh mì</div>
+                                                <div class="item_quantity_OM">Số lượng: 3 trừ 2</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -189,8 +186,8 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bánh mì</div>
-                                                <div class="item_quantity">Số lượng: 69^0</div>                                             
+                                                <div class="item_name_OM">Bánh mì</div>
+                                                <div class="item_quantity_OM">Số lượng: 69^0</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -198,8 +195,8 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bánh mì</div>
-                                                <div class="item_quantity">Số lượng: e^(2*pi*i)</div>                                             
+                                                <div class="item_name_OM">Bánh mì</div>
+                                                <div class="item_quantity_OM">Số lượng: e^(2*pi*i)</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -207,8 +204,8 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bánh mì</div>
-                                                <div class="item_quantity">Số lượng: 1/2+1/4+1/8+1/16...+1/(2^n)</div>                                             
+                                                <div class="item_name_OM">Bánh mì</div>
+                                                <div class="item_quantity_OM">Số lượng: 1/2+1/4+1/8+1/16...+1/(2^n)</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -216,33 +213,33 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.tgdd.vn/2021/05/CookRecipe/Avatar/banh-mi-thit-bo-nuong-thumbnail-1.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Bánh mì</div>
-                                                <div class="item_quantity">Số lượng: sin^2(x) + cos^2(x)</div>                                             
+                                                <div class="item_name_OM">Bánh mì</div>
+                                                <div class="item_quantity_OM">Số lượng: sin^2(x) + cos^2(x)</div>                                             
                                             </div>
                                         </div>
                                     </div>
 
 
                             </div>
-                            <br><button onclick="FinishFunc('item1')" class="button_payment"> Finish</button><br>
+                            <br><button onclick="FinishFunc('item3')" class="finish_food"> Finish</button><br>
                         </div>
                     </div>
                     
 
-                    <div id="item4" class="col">
+                    <div id="item4" class="orderbox">
                         <div class="b4-grid-row">
                             <div class="header_cart">
                                 <i class="bi bi-cart-check-fill"></i>
                                 <div class="your_cart"> Order <span>4</span></div>
-                                <div class="your_cart_id"> Order ID <span>110621303</span></div>
+                                <div class="order_id"> Order ID <span>110621303</span></div>
                             </div>
                             <div class="grid__row">
                                     <div class="col-2">
                                         <div class="item_list_detail" id="1">
                                             <img src="https://cdn.daynauan.info.vn/wp-content/uploads/2019/05/com-tam-la-mon-an-binh-dan.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Cơm sường 1</div>
-                                                <div class="item_quantity">Số lượng: 1</div>                                             
+                                                <div class="item_name_OM">Cơm sường 1</div>
+                                                <div class="item_quantity_OM">Số lượng: 1</div>                                             
                                             </div>
                                         </div>
                                     </div>
@@ -250,14 +247,15 @@
                                         <div class="item_list_detail" id="1">
                                             <img src="https://i.ytimg.com/vi/cJu6tFJe_Gc/maxresdefault.jpg" alt="">
                                             <div class="item_list_content">
-                                                <div class="item_name">Cơm sườn 2</div>
-                                                <div class="item_quantity">Số lượng: 1</div>                                             
+                                                <div class="item_name_OM">Cơm sườn 2</div>
+                                                <div class="item_quantity_OM">Số lượng: 1</div>                                             
                                             </div>
                                         </div>
                                     </div>
 
                             </div>
-                            <br><button onclick="FinishFunc('item1')" class="button_payment"> Finish</button><br>
+                            <br><button onclick="FinishFunc('item4')" class="finish_food"> Finish</button><br>
+
                         </div>
                     </div>
 
