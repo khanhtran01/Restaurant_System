@@ -16,7 +16,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
     document.querySelector('.app').classList.add('displayNode')
     var totalPrice = 0
     var paymentView = `
-    <div class="header">
+    <div class="header payment">
         <div class="header-block row">
             <div class="back-btn col-1">
                 <em class="ti-back-left"></em>
@@ -24,7 +24,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
             <div class="header-term col-10">THANH TOÁN</div>
         </div>
     </div>
-    <div class="full-content">
+    <div class="full-content payment">
         <div class="container">    
             <div class="product-list">
                 <div class="list-header row">
@@ -42,10 +42,10 @@ document.getElementById("button_payment").addEventListener("click", function () 
         ArrProductQuality.push(ele.quantity)
         paymentView += `
         <div class="product row">
-            <div class="product-img col-1">
+            <div class="product-img col-sm-1">
                 <img class="__box-img" src="${ele.img}">
             </div>
-            <div class="product-name col-5">${ele.name}</div>
+            <div class="product-name col-md-5 col-6">${ele.name}</div>
             <div class="product-price col-2">${ele.dongia}đ</div>
             <div class="product-count col-2">${ele.quantity}</div>
             <div class="product-total col-2">${ele.price}đ</div>
@@ -54,10 +54,8 @@ document.getElementById("button_payment").addEventListener("click", function () 
     paymentView += `
                 </div>
                 <div class="total row">
-                    <div class="total-blank1 col-7"></div>
-                    <div class="total-blank2 col-1"></div>
-                    <div class="total-text col-2">TỔNG TIỀN</div>
-                    <div class="total-num col-2">${totalPrice}đ</div>
+                    <div class="total-text col-md-2 col-sm-3 col-4">TỔNG TIỀN</div>
+                    <div class="total-num col-md-2 col-sm-3 col-4">${totalPrice}đ</div>
                 </div>
             </div>
     
@@ -66,10 +64,8 @@ document.getElementById("button_payment").addEventListener("click", function () 
                     Chọn phương thức thanh toán:
                 </div>
                 <div class="chooseMethod--choose" id="chooseMethod--choose">
-                    <ul >
-                        <li onclick="changemethod('e-banking')" class="chooseMethod--method">E-Banking</li>
-                        <li onclick="changemethod('e-wallet')" class="chooseMethod--method active--payment">E-Wallet</li>
-                    </ul>
+                    <div onclick="changemethod('e-banking')" id="e-banking1" class="chooseMethod--method">E-Banking</div>
+                    <div onclick="changemethod('e-wallet')" id="e-wallet1" class="chooseMethod--method active--payment">E-Wallet</div>
                 </div>
             
                 <div class="form" id="form">
@@ -120,30 +116,27 @@ document.getElementById("button_payment").addEventListener("click", function () 
     })
 
 });
-var header = document.getElementById("chooseMethod--choose");
-var btns = header.getElementsByClassName("chooseMethod--method");
-
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active--payment");
-        if (current.length > 0) {
-            current[0].className = current[0].className.replace(" active--payment", "");
-        }
-        this.className += " active--payment";
-    });
-}
 
 
 function changemethod(id) {
     if (id == "e-wallet") {
-        current = document.getElementById(id);
+        current = document.getElementById("e-wallet");
         current.classList.remove("hide")
         document.getElementById("e-banking").className += " hide";
+
+	document.getElementById("e-wallet1").className += " active--payment";
+	current1 = document.getElementById("e-banking1");
+	current1.classList.remove("active--payment")
     }
     if (id == "e-banking") {
-        current = document.getElementById(id);
+        current = document.getElementById("e-banking");
         current.classList.remove("hide")
         document.getElementById("e-wallet").className += " hide";
+
+	document.getElementById("e-banking1").className += " active--payment";
+	current1 = document.getElementById("e-wallet1");
+	current1.classList.remove("active--payment")
     }
 }
+
 
