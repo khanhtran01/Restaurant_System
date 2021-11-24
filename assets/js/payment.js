@@ -77,7 +77,7 @@ document.getElementById("button_payment").addEventListener("click", function () 
                     <option value="SHB">SHB</option>
                 </select>
                 <label for="seri">Số seri:</label>
-                <input type="text" name="seri" id="seri">
+                <input type="text" name="seri" id="seri" placeholder="Seri number">
                 <p class="price">Tổng tiền : ${totalPrice}đ</p>
                 <input type="hidden" name="arr_id" id="arr_id" value="${ArrIDProduct}">
                 <input type="hidden" name="user_ID" id="userID" value="<?=$_SESSION['user_ID']?>">
