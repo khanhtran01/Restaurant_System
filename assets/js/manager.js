@@ -9,7 +9,7 @@ $(document).ready(function () {
     }
     fetchData()
     setInterval(fetchData, 1000);
-    $(document).on('click','.button-finish',function(){
+    $(document).on('click','.finish_food',function(){
         var id = $(this).data('id')
         $.ajax({
             url: "./ManagerController/finishOrder",
