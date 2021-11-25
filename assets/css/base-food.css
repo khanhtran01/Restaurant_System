@@ -146,7 +146,7 @@
     font-size: 20px;
 }
 .item_sale i:hover{
-    color: rgb(235, 100, 21);
+    color: #1E90FF;
 }
 .item_list_detail img{
     width: 100%;
@@ -167,7 +167,7 @@
 .item_price{
     font-size: 15px;
     margin-top: 6px;
-    color: rgb(235, 100, 21);
+    /* color: #1E90FF; */
     font-weight: 550;
 }
 .item_quantity{
@@ -196,12 +196,12 @@
     font-size: 30px;
     margin-bottom: 5px;
     margin-left: 10px;
-    color: rgb(235, 100, 21);
+    color: #1E90FF;
 }
 .your_cart{
     font-size: 20px;
     font-weight: 600;
-    color: rgb(235, 100, 21);
+    color: #1E90FF;
     margin-left: 10px;
 }
 .container_cart{
@@ -258,7 +258,7 @@
 }
 .container_cart_info_price{
     font-size: 15px;
-    color: rgb(235, 100, 21);
+    /* color: #1E90FF; */
     font-weight: 550;
 }
 .payment_cart{
@@ -283,7 +283,7 @@
 .button_payment{
     width: 100%;
     height: 100%;
-    background-color: rgb(235, 100, 21);
+    background-color: #1E90FF;
     font-size: 20px;
     font-family: 'Dancing Script', cursive;
     font-weight: 600;
@@ -337,7 +337,7 @@
     margin-left: 20px;
 }
 .content_top_name{
-    color: rgb(235, 100, 21);
+    color: #1E90FF;
     font-size: 20px;
 }
 .content_top_price, .content_top_quantity{
@@ -366,7 +366,7 @@
     margin-top: auto;
     margin-left: auto;
     padding: 10px 12px 10px 12px;
-    background-color: rgb(235, 100, 21);
+    background-color: #1E90FF;
     border: none;
     border: 1px solid #fff;
     border-radius: 10px;
