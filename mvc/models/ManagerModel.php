@@ -11,7 +11,7 @@ class ManagerModel extends db {
         return $row;
     }
     public function getOrders(){
-        $allBillsql = "SELECT * FROM bill WHERE complete = 0 ORDER BY ID DESC";
+        $allBillsql = "SELECT * FROM bill WHERE complete = 0 ORDER BY ID ASC";
         $query1 = $this->_query($allBillsql);
         $allBills = [];
         while ($row = mysqli_fetch_assoc($query1)) {
